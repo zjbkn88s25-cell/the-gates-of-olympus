@@ -1,15 +1,9 @@
-THE GATES OF OLYMPUS — UPDATE
+THE GATES OF OLYMPUS — OHNE SCHLÖSSER
 
-1. Lade olympus-update.js und olympus-update.css in dasselbe Verzeichnis wie index.html hoch.
-2. Lade mission-24-finale.png hoch (oder .jpg/.webp mit korrekter Dateiendung).
-3. Lade die hochauflösende muses-vase.jpg hoch (oder .png/.webp).
-4. In index.html VOR </head> ergänzen:
-   <link rel="stylesheet" href="olympus-update.css">
-5. In index.html VOR </body> ergänzen (nach dem vorhandenen script.js):
-   <script src="olympus-update.js"></script>
+Alle 24 Tore sind jederzeit anklickbar. Kein Datumstest oder Vorschau-Modus erforderlich.
 
-WICHTIG: Diese beiden Zeilen sind notwendig. Bloßes Hochladen der Update-Dateien aktiviert sie noch nicht.
-Die vorhandenen Dateien index.html, script.js, style.css, missions.json und gate-01.webp bis gate-24.webp nicht löschen.
+Auf GitHub die drei vorhandenen Dateien index.html, script.js und style.css durch die drei Dateien aus diesem Paket ersetzen. missions.json und alle Bilder bleiben unverändert.
 
-TECHNISCHER HINWEIS:
-Die Missionsnummer wird aus der URL (z.B. #mission-01), einem data-mission-Attribut oder der Missionsüberschrift abgeleitet. Falls die bestehende Navigation die Nummer ausschließlich in JavaScript speichert, muss die Integration an die tatsächliche script.js angepasst werden. Bitte deshalb die Originaldateien index.html, script.js und style.css hochladen, damit wir eine vollständig integrierte, sichere Ersatzversion bauen können.
+Für das Finale muss die Datei mission-24-finale.png im Hauptverzeichnis liegen. Die Prolog-Vase wird als muses-vase.jpg geladen.
+
+Nach dem Upload die GitHub-Pages-Seite neu laden und Tor 01, 12 und 24 prüfen.
