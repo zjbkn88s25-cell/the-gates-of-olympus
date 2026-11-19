@@ -1,0 +1,1 @@
+Alle 5 Dateien im Hauptverzeichnis des GitHub-Repositories hochladen (nicht den Ordner oder ZIP). Die drei Code-Dateien ersetzen die bisherigen. Die beiden PNG-Bilder sind neu. missions.json und gate-01.webp bis gate-24.webp nicht anfassen. Anschliessend Website neu laden und Prolog und Mission 24 pruefen.
