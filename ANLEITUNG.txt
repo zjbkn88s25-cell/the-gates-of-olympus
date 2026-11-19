@@ -1,9 +1,13 @@
-THE GATES OF OLYMPUS — OHNE SCHLÖSSER
+THE GATES OF OLYMPUS – FINALE VERSION MIT ORIGINALBILDERN
 
-Alle 24 Tore sind jederzeit anklickbar. Kein Datumstest oder Vorschau-Modus erforderlich.
+Auf GitHub im Hauptverzeichnis die drei Dateien index.html, script.js und style.css durch die Dateien aus diesem ZIP ersetzen.
 
-Auf GitHub die drei vorhandenen Dateien index.html, script.js und style.css durch die drei Dateien aus diesem Paket ersetzen. missions.json und alle Bilder bleiben unverändert.
+Die beiden Bilder werden mit ihren ORIGINALEN GitHub-Dateinamen angesprochen:
+- Die griechische Vase mit den Musen.PNG
+- Maxi mit den fünf Musen.PNG
 
-Für das Finale muss die Datei mission-24-finale.png im Hauptverzeichnis liegen. Die Prolog-Vase wird als muses-vase.jpg geladen.
+Die Bilder müssen bereits im selben Hauptverzeichnis liegen (wie auf deinem Screenshot). Nicht umbenennen.
+missions.json, olympus.webp und gate-01.webp bis gate-24.webp nicht verändern.
 
-Nach dem Upload die GitHub-Pages-Seite neu laden und Tor 01, 12 und 24 prüfen.
+Alle Tore sind jederzeit geöffnet. Mission 24 zeigt zusätzlich das Maxi-Finale.
+Nach dem Upload Webseite neu laden und Prolog sowie Mission 24 testen.
