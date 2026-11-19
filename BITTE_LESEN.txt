@@ -1,1 +1,9 @@
-Alle 5 Dateien im Hauptverzeichnis des GitHub-Repositories hochladen (nicht den Ordner oder ZIP). Die drei Code-Dateien ersetzen die bisherigen. Die beiden PNG-Bilder sind neu. missions.json und gate-01.webp bis gate-24.webp nicht anfassen. Anschliessend Website neu laden und Prolog und Mission 24 pruefen.
+OLYMPUS - FINAL (5 DATEIEN)
+
+Alle 5 Dateien aus dieser ZIP direkt ins Hauptverzeichnis deines GitHub-Repositories hochladen (neben missions.json). Nicht die ZIP selbst hochladen.
+
+index.html, script.js und style.css ersetzen die bisherigen Versionen. muses-vase-hd.png und mission-24-finale.png sind neue Bilder.
+
+Die vorhandenen 24 gate-XX.webp, olympus.webp und missions.json NICHT loeschen oder aendern.
+
+Danach GitHub Pages neu laden, Prolog testen und Mission 24 testen. Bei Mission 24: Torbild, Missionstext, danach Maxi mit den fuenf Musen. Alle Tore sind ohne Datumssperre offen.
