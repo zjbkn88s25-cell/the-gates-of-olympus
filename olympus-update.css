@@ -1,0 +1,26 @@
+/* Non-destructive styling for large mission artwork */
+.olympus-mission-art {
+  width: min(100%, 960px);
+  margin: 1.5rem auto 2rem;
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+}
+.olympus-mission-art img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 12px;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,.25));
+}
+.olympus-mission-art .olympus-finale-art {
+  width: 100%;
+  max-height: none;
+}
+@media (max-width: 600px) {
+  .olympus-mission-art { margin: 1rem auto 1.5rem; gap: 1.5rem; }
+  .olympus-mission-art img { max-height: 70vh; }
+}
