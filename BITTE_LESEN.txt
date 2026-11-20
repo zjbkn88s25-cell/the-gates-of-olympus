@@ -1,9 +1,1 @@
-OLYMPUS - FINAL (5 DATEIEN)
-
-Alle 5 Dateien aus dieser ZIP direkt ins Hauptverzeichnis deines GitHub-Repositories hochladen (neben missions.json). Nicht die ZIP selbst hochladen.
-
-index.html, script.js und style.css ersetzen die bisherigen Versionen. muses-vase-hd.png und mission-24-finale.png sind neue Bilder.
-
-Die vorhandenen 24 gate-XX.webp, olympus.webp und missions.json NICHT loeschen oder aendern.
-
-Danach GitHub Pages neu laden, Prolog testen und Mission 24 testen. Bei Mission 24: Torbild, Missionstext, danach Maxi mit den fuenf Musen. Alle Tore sind ohne Datumssperre offen.
+Nur index.html auf GitHub ersetzen. Alle anderen Dateien (script.js, style.css, Bilder und missions.json) unverändert lassen. Diese Version ersetzt nur das Omega auf HOME durch das goldene Sternzeichen Schütze.
