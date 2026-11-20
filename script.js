@@ -4,19 +4,19 @@ let missions=[];const main=document.getElementById('main');function dayOpen(n){r
 /* THE GATES OF OLYMPUS — optional 25s home and 10s Muses music.
    Playback starts only following a user gesture (required by mobile browsers). */
 (()=>{
-  const tracks={home:new Audio('olympus-startseite-25-sekunden.mp3'),prologue:new Audio('musen-prolog-10-sekunden.mp3')};
+  const tracks={home:new Audio('olympus-startseite-25-sekunden.mp3'),prologue:new Audio('musen-prolog-10-sekunden.mp3'),birthday:new Audio('maximilian-geburtstag-tor-12.mp3')};
   Object.values(tracks).forEach(audio=>{audio.preload='none';audio.loop=false;});
   let current=null;
   const buttons={};
   const style=document.createElement('style');
-  style.textContent='.music-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #cfa96280;border-radius:25px;padding:11px 18px;margin:12px 8px;color:#fff2d7;background:#192744;font:12px Georgia,serif;letter-spacing:.06em;cursor:pointer}.music-button:hover,.music-button:focus-visible{background:#5b4525}.music-button:focus-visible{outline:2px solid #f3cc76}';
+  style.textContent='.music-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #cfa96280;border-radius:25px;padding:11px 18px;margin:12px 8px;color:#fff2d7;background:#192744;font:12px Georgia,serif;letter-spacing:.06em;cursor:pointer}.music-button[hidden]{display:none!important}.music-button:hover,.music-button:focus-visible{background:#5b4525}.music-button:focus-visible{outline:2px solid #f3cc76}';
   document.head.appendChild(style);
-  function refresh(){Object.keys(buttons).forEach(view=>{const a=tracks[view];buttons[view].textContent=(!a.paused&&current===view)?'♫  PAUSE MUSIC':'♫  PLAY MUSIC';buttons[view].setAttribute('aria-label',view==='home'?'Play or pause homepage music':'Play or pause Muses music');});}
+  function refresh(){if(buttons.birthday)buttons.birthday.hidden=location.hash!=='#mission-12';Object.keys(buttons).forEach(view=>{const a=tracks[view];buttons[view].textContent=(!a.paused&&current===view)?'♫  PAUSE MUSIC':'♫  PLAY MUSIC';buttons[view].setAttribute('aria-label',view==='home'?'Play or pause homepage music':view==='birthday'?'Play or pause birthday music':'Play or pause Muses music');});}
   function stop(){Object.values(tracks).forEach(a=>{a.pause();a.currentTime=0;});current=null;refresh();}
   function play(view){if(!tracks[view]){stop();return;}const a=tracks[view];if(current===view&&!a.paused){a.pause();refresh();return;}stop();current=view;a.currentTime=0;const result=a.play();if(result&&typeof result.catch==='function')result.catch(()=>{current=null;refresh();});refresh();}
   const home=document.querySelector('#home .hero');
-  const muses=document.querySelector('#prologue .vase-wrap');
-  [['home',home],['prologue',muses]].forEach(([view,place])=>{if(!place)return;const b=document.createElement('button');b.type='button';b.className='music-button';b.textContent='♫  PLAY MUSIC';b.addEventListener('click',()=>play(view));place.appendChild(b);buttons[view]=b;});
+  const muses=document.querySelector('#prologue .vase-wrap');const birthday=document.querySelector('#mission .mission-head');
+  [['home',home],['prologue',muses],['birthday',birthday]].forEach(([view,place])=>{if(!place)return;const b=document.createElement('button');b.type='button';b.className='music-button';b.textContent='♫  PLAY MUSIC';b.addEventListener('click',()=>play(view));place.appendChild(b);buttons[view]=b;});
   Object.entries(tracks).forEach(([view,a])=>a.addEventListener('ended',()=>{if(current===view)current=null;refresh();}));
   // Existing navigation listeners are registered earlier; the click remains a user gesture.
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{
@@ -25,7 +25,7 @@ let missions=[];const main=document.getElementById('main');function dayOpen(n){r
     else stop();
   }));
   // Gate buttons are created dynamically, so listen for their clicks on the scene.
-  const gates=document.getElementById('gates');if(gates)gates.addEventListener('click',e=>{if(e.target.closest('.gate'))stop();});
-  window.addEventListener('hashchange',()=>{const view=location.hash.slice(1);if(view!=='home'&&view!=='prologue')stop();});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden){Object.values(tracks).forEach(a=>a.pause());refresh();}});
+  const gates=document.getElementById('gates');if(gates)gates.addEventListener('click',e=>{const gate=e.target.closest('.gate');if(gate){const number=Number(gate.getAttribute('aria-label')?.match(/\d+/)?.[0]);if(number===12)play('birthday');else stop();}});
+  window.addEventListener('hashchange',()=>{const view=location.hash.slice(1);if(view!=='home'&&view!=='prologue'&&view!=='mission-12')stop();refresh();});
+  refresh();document.addEventListener('visibilitychange',()=>{if(document.hidden){Object.values(tracks).forEach(a=>a.pause());refresh();}});
 })();
